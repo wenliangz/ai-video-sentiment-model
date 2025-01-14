@@ -31,13 +31,13 @@ Follow these steps to install and set up the project.
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/Andreaswt/ai-sentiment-analysis-model.git
+git clone https://github.com/Andreaswt/ai-video-sentiment-model.git
 ```
 
 ### Navigate to the Project Directory
 
 ```bash
-cd ai-sentiment-analysis-model
+cd ai-video-sentiment-model
 ```
 
 ### Install Python
