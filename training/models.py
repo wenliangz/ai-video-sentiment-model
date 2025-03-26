@@ -149,7 +149,7 @@ def compute_class_weights(dataset):
     skipped = 0
     total = len(dataset)
 
-    print("\Counting class distributions...")
+    print(f"Counting class distributions...")
     for i in range(total):
         sample = dataset[i]
 

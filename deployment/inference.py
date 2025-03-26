@@ -174,13 +174,15 @@ class VideoUtteranceProcessor:
         os.makedirs(temp_dir, exist_ok=True)
         segment_path = os.path.join(
             temp_dir, f"segment_{start_time}_{end_time}.mp4")
-
+        # to force the output audio to stereo (-ac 2)
+        # ffmpeg -i ./dia2_utt3.mp4 -ss 0.0 -to 1.68 -c:v libx264 -c:a aac -ac 2 -y /tmp/segment_0.0_1.68.mp4
         subprocess.run([
             "ffmpeg", "-i", video_path,
             "-ss", str(start_time),
             "-to", str(end_time),
             "-c:v", "libx264",
             "-c:a", "aac",
+            "-ac",'2',
             "-y",
             segment_path
         ], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
